@@ -2,20 +2,25 @@ package lv.rvt;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.util.Scanner;
 
 public class App 
 {
     public static void main( String[] args )
     {
-        // uzdevuma nosaukums
-        System.out.println("Hello world!");
-        String name = "Jānis";
-        int age = 16;
-        boolean isOnline = false;
         
-        System.out.println(name);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ievadi savu vārdu");
 
-        // code ends
+        String name = scanner.nextLine();
+
+        System.out.println();
+        String lastname = scanner.nextLine();
+
+        System.out.println();
+        String group = scanner.nextLine();
+
+        System.out.println("Students: " + name + " " + lastname + ", grupa: " + group);
     }
 
 }
