@@ -11,32 +11,21 @@ public class App
     public static void main( String[] args )
     {
         Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Value of the gift?");
-        int gift = Integer.valueOf(scanner.nextLine());
-
-        if (gift < 5000) {
-            System.out.println("No tax!");
-        }
-        else if (5000 <= gift && gift < 25000) {
-            double giftTax = (100 + (gift - 5000) * 0.08);
-            System.out.println("Tax: " + giftTax);
-        }
-        else if (25000 <= gift && gift < 55000) {
-            double giftTax = (1700 + (gift - 25000) * 0.1);
-            System.out.println("Tax: " + giftTax);
-        }
-        else if (55000 <= gift && gift < 200000) {
-            double giftTax = (4700 + (gift - 55000) * 0.12);
-            System.out.println("Tax: " + giftTax);
-        }
-        else if (200000 <= gift && gift < 1000000) {
-            double giftTax = (22100 + (gift - 200000) * 0.15);
-            System.out.println("Tax: " + giftTax);
-        }
-        else if (1000000 <= gift) {
-            double giftTax = (142100 + (gift - 1000000) * 0.17);
-            System.out.println("Tax: " + giftTax);
+        int amount = 0;
+        int sum = 0;
+        
+        while (true) {
+            System.out.println("Give a number:");
+            int number = Integer.valueOf(scanner.nextLine());
+            
+            if (number == 0) {
+                System.out.println("Number of numbers: " + amount);
+                System.out.println("Sum of the numbers: " + sum);
+                break;
+            } else {
+                amount += 1;
+                sum += number;
+            }
         }
     }   
 }
