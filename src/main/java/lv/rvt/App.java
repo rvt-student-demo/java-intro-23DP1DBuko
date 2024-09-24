@@ -12,20 +12,31 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Give the first number:");
+        System.out.println("Value of the gift?");
+        int gift = Integer.valueOf(scanner.nextLine());
 
-        int first = Integer.valueOf(scanner.nextLine());
-
-        System.out.println("Give the second number:");
-
-        int second = Integer.valueOf(scanner.nextLine());
-
-        if (first > second) {
-            System.out.println("Greatest number is: " + first);
-        } else if (first < second) {
-            System.out.println("Greatest number is: " + second);
-        } else {
-            System.out.println("The numbers are equal!");
+        if (gift < 5000) {
+            System.out.println("No tax!");
+        }
+        else if (5000 <= gift && gift < 25000) {
+            double giftTax = (100 + (gift - 5000) * 0.08);
+            System.out.println("Tax: " + giftTax);
+        }
+        else if (25000 <= gift && gift < 55000) {
+            double giftTax = (1700 + (gift - 25000) * 0.1);
+            System.out.println("Tax: " + giftTax);
+        }
+        else if (55000 <= gift && gift < 200000) {
+            double giftTax = (4700 + (gift - 55000) * 0.12);
+            System.out.println("Tax: " + giftTax);
+        }
+        else if (200000 <= gift && gift < 1000000) {
+            double giftTax = (22100 + (gift - 200000) * 0.15);
+            System.out.println("Tax: " + giftTax);
+        }
+        else if (1000000 <= gift) {
+            double giftTax = (142100 + (gift - 1000000) * 0.17);
+            System.out.println("Tax: " + giftTax);
         }
     }   
 }
