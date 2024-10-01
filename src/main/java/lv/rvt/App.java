@@ -9,14 +9,15 @@ import javax.swing.plaf.ScrollPaneUI;
 public class App 
 {
     public static void main(String[] args) {
-        printUntilNumber(2);
+        printFromNumberToOne(5);
     }
-    public static void printUntilNumber(int i) {
-        int num = 1;
-        while (num <= i) {
-            System.out.println(num);
-            num ++;
+    
+    public static void printFromNumberToOne(int i) {
+        while (i >= 1) {
+            System.out.println(i);
+            i --;
         }
+
     }
 
 }
