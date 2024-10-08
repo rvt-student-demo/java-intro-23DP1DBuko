@@ -9,15 +9,15 @@ import javax.swing.plaf.ScrollPaneUI;
 public class App 
 {
     public static void main(String[] args) {
-        printStars(5);
-        printStars(3);
-        printStars(9);
+        printSquare(4);
     }
     
-    public static void printStars(int number) {
-        for (int i = 0; i < number; i++) {
-            System.out.print("*");    
+    public static void printSquare(int size) {
+        for (int a = 0; a < size; a++) {
+            for (int i = 0; i < size; i++) {
+                System.out.print("*");    
+            }
+            System.out.println();
         }
-        System.out.println();
     }
 }
