@@ -9,15 +9,15 @@ import javax.swing.plaf.ScrollPaneUI;
 public class App 
 {
     public static void main(String[] args) {
-        divisibleByThreeInRange(2, 10);
+        printStars(5);
+        printStars(3);
+        printStars(9);
     }
     
-    public static void divisibleByThreeInRange(int beginning, int end) {
-        while (beginning <= end) {
-            if (beginning % 3 == 0) {
-                System.out.println(beginning);
-            }
-            beginning ++;
+    public static void printStars(int number) {
+        for (int i = 0; i < number; i++) {
+            System.out.print("*");    
         }
+        System.out.println();
     }
 }
