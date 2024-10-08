@@ -9,12 +9,12 @@ import javax.swing.plaf.ScrollPaneUI;
 public class App 
 {
     public static void main(String[] args) {
-        printSquare(4);
+        printRectangle(17, 3);
     }
     
-    public static void printSquare(int size) {
-        for (int a = 0; a < size; a++) {
-            for (int i = 0; i < size; i++) {
+    public static void printRectangle(int width, int height) {
+        for (int a = 0; a < height; a++) {
+            for (int i = 0; i < width; i++) {
                 System.out.print("*");    
             }
             System.out.println();
