@@ -21,6 +21,10 @@ public class App
                 break;
             }
         }
-        System.out.println(intList.get(1) + intList.get(2));
+        int summ = 0;
+        for(int i = 0; i<intList.size(); i++) {
+            summ += intList.get(i);
+        }
+        System.out.println(summ);
     }
 }
