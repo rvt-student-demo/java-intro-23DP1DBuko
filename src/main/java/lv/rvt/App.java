@@ -12,15 +12,15 @@ public class App
     public static void main(String[] args) {
         
         Scanner scanner = new Scanner(System.in);
-        ArrayList<String> vardiArrayList = new ArrayList<>();
-        
+        ArrayList<Integer> intList = new ArrayList<>();
+
         while (true) {
-            String vards = scanner.nextLine();
-            vardiArrayList.add(vards);
-            if (vards.equals("")) {
+            int input = Integer.valueOf(scanner.nextLine());
+            intList.add(input);
+            if (input == 0) {
                 break;
             }
         }
-        System.out.println(vardiArrayList.get(2));
+        System.out.println(intList.get(1) + intList.get(2));
     }
 }
