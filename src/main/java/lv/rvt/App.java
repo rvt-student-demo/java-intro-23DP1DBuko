@@ -9,14 +9,19 @@ import java.util.*;
 public class App {
 
     public static void main(String[] args) {
-        Statistics statistics = new Statistics();
-        statistics.addNumber(3);
-        statistics.addNumber(5);
-        statistics.addNumber(1);
-        statistics.addNumber(2);
-        System.out.println("Count: " + statistics.getCount());
-        System.out.println("Sum: " + statistics.sum());
-        System.out.println("Average: " + statistics.average());
-    }
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Enter numbers:");
+
+        Statistics statistics = new Statistics();
+        
+        while(true) {
+            int number = Integer.valueOf(scanner.nextLine());
+            if (number == -1) {
+                System.out.println("Sum: " + statistics.sum());
+                break;
+            }
+            statistics.addNumber(number);
+        }        
+    }
 }
