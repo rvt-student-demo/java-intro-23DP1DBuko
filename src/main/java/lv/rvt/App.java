@@ -1,33 +1,22 @@
-package lv.rvt;
+package lv.rvt; 
+ 
+import java.io.BufferedReader; 
+import java.util.*; 
+ 
+public class App { 
+    public static void main(String[] args) throws Exception { 
+ 
+        Timer timer = new Timer();
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
+        while (true) {
+            System.out.println(timer);
+            timer.advance();
 
-import javax.swing.plaf.ScrollPaneUI;
-import java.util.*;
+            try {
+                Thread.sleep(10);
+            } catch (Exception e) {
 
-public class App {
-    public static void main(String[] args) {
-        PaymentCard paulCard = new PaymentCard(20);
-        PaymentCard mattCard = new PaymentCard(30);
-        
-        paulCard.eatHeartily();
-        mattCard.eatAffordably();
-
-        System.out.println("Paul: " + paulCard);
-        System.out.println("Matt: " + mattCard);
-
-        paulCard.addMoney(20);
-        mattCard.eatHeartily();
-
-        System.out.println("Paul: " + paulCard);
-        System.out.println("Matt: " + mattCard);
-
-        paulCard.eatAffordably();
-        paulCard.eatAffordably();
-        mattCard.addMoney(50);
-
-        System.out.println("Paul: " + paulCard);
-        System.out.println("Matt: " + mattCard);
-    }
+            }
+        }
+    } 
 }
