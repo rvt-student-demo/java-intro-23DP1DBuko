@@ -23,11 +23,13 @@ public class Person {
         this.height = 0;
     }
 
-    public void growOlder() { 
-        if (this.age < 30) { 
-            this.age ++; 
-        }                                                                                                                                    
-    } 
+    public void growOlder() {
+        this.age = this.age + 1;
+    }
+    
+    public void growOlder(int years) {
+        this.age = this.age + years;
+    }
  
     public int returnAge() { 
         return this.age; 
