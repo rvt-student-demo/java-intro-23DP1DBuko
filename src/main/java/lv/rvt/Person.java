@@ -64,9 +64,14 @@ public class Person {
         this.weight = newWeight; 
     } 
  
+    public void setName(String newName) {
+        this.name = newName;
+    }
     public double bodyMassIndex() { 
         double heigthPerHundred = this.height / 100.0; 
         return this.weight / (heigthPerHundred * heigthPerHundred); 
     } 
-     
+    public String toCsvRow() {
+        return this.name + ", " + this.age + ", " + this.weight + ", " + this.height;
+    }
 }
