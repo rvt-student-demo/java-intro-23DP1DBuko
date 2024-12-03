@@ -23,6 +23,10 @@ public class Person {
         this.height = 0;
     }
 
+    public Person(String name, String age, String weight, String height){
+        this.name = name;
+    }
+
     public void growOlder() {
         this.age = this.age + 1;
     }
