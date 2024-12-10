@@ -72,7 +72,7 @@ public class Person {
 
     // Person getter
     public String getName() {
-        return this.name;
+        return this.name + "'s";
     }
     public int getAge() {
         return this.age;
