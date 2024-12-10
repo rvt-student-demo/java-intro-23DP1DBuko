@@ -43,10 +43,6 @@ public class Person {
         return this.age <= 18; 
     } 
  
-    public String getName() { 
-        return this.name; 
-    } 
- 
     @Override 
     public String toString() { 
         return this.name + ", age " + this.age + " years"; 
@@ -73,5 +69,19 @@ public class Person {
     } 
     public String toCsvRow() {
         return this.name + ", " + this.age + ", " + this.weight + ", " + this.height;
+    }
+
+    // Person getter
+    public String getName() {
+        return this.name;
+    }
+    public int getAge() {
+        return this.age;
+    }
+    public int getHeight() {
+        return this.height;
+    }
+    public int getWeight() {
+        return this.weight;
     }
 }

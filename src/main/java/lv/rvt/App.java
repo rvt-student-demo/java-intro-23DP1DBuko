@@ -9,22 +9,24 @@ import javax.sound.midi.Soundbank;
 public class App { 
     public static void main(String[] args) throws Exception { 
         Scanner scanner = new Scanner(System.in);
+        boolean isProgramRunning = true;
+        System.out.println("Welcome to person manager, type \"help\" to see available commands.");
 
-        System.out.println("Sveiki, lūdzu izvēlies komandu: ");
-        System.out.println("show - parādīt visas personas");
-        System.out.println("add - pievienot personu");
-        System.out.println("exit - iziet no programmas");
-        String userCommand = scanner.nextLine();
-        
-        while(userCommand.equals("exit") == false) {
-            if (userCommand.equals("show")) {
-                System.out.println("Show all persons: ");
-                ArrayList<Person> persons = PersonManager.getPersonList();
-            
-                for (Person person: persons) {
-                    System.out.println(person);
+        while (isProgramRunning) {
+            String command = scanner.nextLine();
+
+            if(command.equals("exit")) {
+                isProgramRunning = false;
+            } else if (command.equals("show")) {
+                
+                System.out.println("Show all persons");
+                ArrayList<Person> allPersons = PersonManager.getPersonList();
+                for (Person person1: allPersons) {
+                    System.out.println(person1);
                 }
-            } else if (userCommand.equals("add")) {
+
+            } else if (command.equals("add")) {
+                
                 System.out.println("Enter your name: ");
                 String name = scanner.nextLine();
                 System.out.println("Enter your age: ");
@@ -38,10 +40,19 @@ public class App {
     
                 PersonManager.addPerson(person);
                 System.out.println("Person added");
+
+            } else if (command.equals("help")) {
+                
+                System.out.println("Available commands:");
+                System.out.println("- show: parāda visas personas no csv faila.");
+                System.out.println("- add: pievieno personu csv failam.");
+                System.out.println("- help: parāda iespējamas komandas.");
+                System.out.println("- exit: aptur programmas darbību ar paziņojumu (Thanks, bye bye!)");
+            
             }
-            String userCommand = scanner.nextLine();
+            System.out.println("Your command was: " + command);
         }
-        System.out.println("Bye!";);
+        System.out.println("Thanks, bye bye!");
     }
     public static void modify(Person person) {
         person.setName("Modified!");
