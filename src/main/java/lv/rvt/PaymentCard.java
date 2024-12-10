@@ -3,8 +3,12 @@ package lv.rvt;
 public class PaymentCard {
     private double balance;
 
-    public PaymentCard(double openingBalance) {
-        this.balance = openingBalance * 1.0;
+    public PaymentCard(double balance) {
+        this.balance = balance;
+    }
+
+    public double balance() {
+        return this.balance;
     }
 
     public String toString() {
@@ -23,12 +27,16 @@ public class PaymentCard {
         }
     }
 
-    public void addMoney(double amount) {
-        if (amount > 0) {
-            this.balance += amount;
-        }
-        if (this.balance > 150) {
-            this.balance = 150;
+    public void addMoney(double increase) {
+        this.balance = this.balance + increase;
+    }
+
+    public boolean takeMoney(double amount) {
+        if (this.balance >= amount) {
+            this.balance -= amount;
+            return true;
+        } else {
+            return false;
         }
     }
 }
