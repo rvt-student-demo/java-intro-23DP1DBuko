@@ -25,6 +25,9 @@ public class Person {
 
     public Person(String name, String age, String weight, String height){
         this.name = name;
+        this.age = Integer.valueOf(age);
+        this.weight = Integer.valueOf(weight);
+        this.height = Integer.valueOf(height);
     }
 
     public void growOlder() {
@@ -35,14 +38,10 @@ public class Person {
         this.age = this.age + years;
     }
  
-    public int returnAge() { 
-        return this.age; 
-    } 
- 
     public boolean isOfLegalAge() { 
         return this.age <= 18; 
     } 
- 
+
     @Override 
     public String toString() { 
         return this.name + ", age " + this.age + " years"; 

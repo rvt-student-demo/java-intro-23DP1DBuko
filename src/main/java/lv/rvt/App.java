@@ -18,13 +18,16 @@ public class App {
             if(command.equals("exit")) {
                 isProgramRunning = false;
             } else if (command.equals("show")) {
-                
                 System.out.println("Show all persons");
                 ArrayList<Person> allPersons = PersonManager.getPersonList();
+                System.out.println("----------------------------------------------------");
+                System.out.println("|  Name  | Age | Weight | Height | Body mass index |");
+                System.out.println("----------------------------------------------------");
                 for (Person person1: allPersons) {
-                    System.out.println(person1);
+                    System.out.printf("| %-7s| %-4d| %-7d| %-7d| %-16.2f|", person1.getName(), person1.getAge(), person1.getWeight(), person1.getHeight(), person1.bodyMassIndex());
+                    System.out.println();
                 }
-
+                System.out.println("----------------------------------------------------");
             } else if (command.equals("add")) {
                 
                 System.out.println("Enter your name: ");
