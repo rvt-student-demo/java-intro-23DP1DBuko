@@ -22,6 +22,13 @@ public class Apartment {
         return Math.abs(compared.getPrice() - this.getPrice());
     }
 
+    public boolean moreExpensiveThan(Apartment compared) {
+        if (compared.getPrice() <= this.getPrice()) {
+            return true;
+        }
+        return false;
+    }
+
     public int getSquares() {
         return this.squares;
     }
