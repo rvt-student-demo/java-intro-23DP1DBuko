@@ -1,13 +1,12 @@
 package lv.rvt;
 
-import java.time.LocalDate;
 
 public class Person { 
     private String name; 
     private int age; 
     private int weight; 
     private int height; 
-    private LocalDate birthday;
+    private SimpleDate birthday;
     
     // All args constructor
     public Person(String name, int age, int weight, int height) { 
@@ -26,10 +25,9 @@ public class Person {
         this.height = 0;
     }
 
-    public Person(String name, LocalDate date) {
+    public Person(String name, SimpleDate date) {
         this.name = name;
         this.birthday = date;
-        
     }
 
     public Person(String name, String age, String weight, String height){

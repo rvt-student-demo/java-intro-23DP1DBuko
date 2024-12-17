@@ -1,14 +1,32 @@
 package lv.rvt;
 
 public class Student {
-
-    private int credits;
-
-    public Student() {
-        this.credits = 0;
+    
+    private String name;
+    public Student(String name){
+        this.name = name;
     }
 
-    public void play() {
-        this.credits = this.credits - 8;
+    public String getName() {
+        return this.name;
     }
-}
+
+
+    @Override
+    public boolean equals(Object compared) {
+        if (this == compared) {
+            return true;
+        } 
+
+        if (!(compared instanceof Student)) {
+            return false;
+        }
+
+        Student comparedStudent = (Student) compared;
+
+        if (this.name.equals(comparedStudent.getName())) {
+            return true;
+        }
+        return false;
+    }
+}             

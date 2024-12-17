@@ -8,23 +8,13 @@ import javax.sound.midi.Soundbank;
  
 public class App { 
     public static void main(String[] args) {
-        PaymentTerminal unicafeExactum = new PaymentTerminal();
-        System.out.println(unicafeExactum);
+        // objektu salidzinasana
+        String a = "abc";
+        String b = "abc";
 
-        PaymentCard annesCard = new PaymentCard(2);
+        Student student1 = new Student("John");
+        Student student2 = new Student("John");
+        System.out.println(student1.equals(student2));
 
-        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
-
-        boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        System.out.println("there was enough money: " + wasSuccessful);
-
-        unicafeExactum.addMoneyToCard(annesCard, 100);
-
-        wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        System.out.println("there was enough money: " + wasSuccessful);
-
-        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
-
-        System.out.println(unicafeExactum);
-    }
+    }           
 }
