@@ -35,9 +35,9 @@ public class PaymentTerminal {
     }
 
     public boolean eatAffordably(PaymentCard card) {
-        if (card.balance() >= this.affordableMeal) {
+        this.affordableMeal = 2.50;
+        if (card.takeMoney(this.affordableMeal)) {
             affordableMeals += 1;
-            card.takeMoney(this.affordableMeal);
             return true;
         } else {
             return false;
@@ -45,9 +45,9 @@ public class PaymentTerminal {
     }
 
     public boolean eatHeartily(PaymentCard card) {
-        if (card.balance() >= this.heartyMeal) {
+        this.heartyMeal = 4.30;
+        if (card.takeMoney(this.heartyMeal)) {
             heartyMeals += 1;
-            card.takeMoney(this.heartyMeal);
             return true;
         } else {
             return false;
