@@ -8,13 +8,11 @@ import javax.sound.midi.Soundbank;
  
 public class App { 
     public static void main(String[] args) {
-        // objektu salidzinasana
-        String a = "abc";
-        String b = "abc";
+        Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
+        Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
+        Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
 
-        Student student1 = new Student("John");
-        Student student2 = new Student("John");
-        System.out.println(student1.equals(student2));
-
+        System.out.println(manhattanStudioApt.largerThan(atlantaTwoBedroomApt));       // false
+        System.out.println(bangorThreeBedroomApt.largerThan(atlantaTwoBedroomApt));  // true
     }           
 }
