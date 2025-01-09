@@ -18,6 +18,12 @@ public class Box {
         this.height = side;
     }
     
+    public Box( Box oldBox ){
+        this.length = oldBox.length();
+        this.width = oldBox.width();
+        this.height = oldBox.height();
+    }
+
     public double volume(){
         return this.length * this.width * this.height;
     }
@@ -52,5 +58,17 @@ public class Box {
 
     public double getSideArea(){
         return sideArea();
+    }
+
+    public double length(){
+        return this.length;
+    }
+
+    public double height(){
+        return this.height;
+    }
+
+    public double width(){
+        return this.width;
     }
 }
