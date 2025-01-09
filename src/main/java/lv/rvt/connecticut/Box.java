@@ -4,7 +4,6 @@ public class Box {
     private double length;
     private double width;
     private double height;
-    private double side;
 
 
     public Box(double length, double width, double height){
@@ -24,11 +23,34 @@ public class Box {
     }
 
     public double area(){
-        return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+        return 2 * (faceArea() + topArea() + sideArea());
     }
 
     public String toString(){
         return "length: " + this.length + " height: " + this.height +" width: " + this.width;
     }
 
+    private double faceArea(){
+        return this.length * this.height;
+    }
+
+    private double topArea(){
+        return this.length * this.width;
+    }
+
+    private double sideArea(){
+        return this.width * this.height;
+    }
+
+    public double getFaceArea(){
+        return faceArea();
+    }
+
+    public double getTopArea(){
+        return topArea();
+    }
+
+    public double getSideArea(){
+        return sideArea();
+    }
 }
