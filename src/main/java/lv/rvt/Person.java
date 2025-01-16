@@ -7,13 +7,15 @@ public class Person {
     private int weight; 
     private int height; 
     private SimpleDate birthday;
+    private String address;
     
     // All args constructor
-    public Person(String name, int age, int weight, int height) { 
+    public Person(String name, int age, int weight, int height, String address) { 
         this.name = name; 
         this.age = age; 
         this.weight = weight; 
         this.height = height; 
+        this.address = address;
     } 
     
     // Second constructor with only one parameter
@@ -37,6 +39,9 @@ public class Person {
         this.height = Integer.valueOf(height);
     }
 
+    public Person(String name, String address){
+        this(name, 0, 0, 0, address);
+    }
     public void growOlder() {
         this.age = this.age + 1;
     }
@@ -51,7 +56,7 @@ public class Person {
 
     @Override 
     public String toString() { 
-        return this.name + ", age " + this.age + " years"; 
+        return this.name + "\n\t" + this.address;
     } 
      
     public void printPerson() { 

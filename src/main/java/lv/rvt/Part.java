@@ -12,6 +12,12 @@ public class Part {
         this.description = description;
     }
 
+    // protected
+    // ir neredzams priekš visām klasēm, izņemot sub klases, vai nu child klases
+    protected String getPartId() {
+        return "5252525252";
+    }
+
     public String getIdentifier() {
         return identifier;
     }
