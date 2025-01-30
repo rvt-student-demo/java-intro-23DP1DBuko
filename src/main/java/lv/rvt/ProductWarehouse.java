@@ -13,6 +13,13 @@ public class ProductWarehouse extends Warehouse {
         return this.name;
     }
 
+    public void setName(String newName) {
+        this.name = newName;
+    }
 
+    @Override
+    public String toString() {
+        return this.name + ": balance = " +  getBalance() + ", space left " + howMuchSpaceLeft();
+    }
 }
 
