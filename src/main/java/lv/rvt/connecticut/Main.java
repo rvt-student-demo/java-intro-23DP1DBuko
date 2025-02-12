@@ -5,5 +5,8 @@ public class Main {
         Valentine cardV = new Valentine("Deniss", 2);
         System.out.println(cardV.getType());
         cardV.printGreeting();
+        Birthday cardB = new Birthday("Deniss", 52);
+        System.out.println(cardB.getType());
+        cardB.printGreeting();
     }
 }

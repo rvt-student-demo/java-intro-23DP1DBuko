@@ -9,7 +9,7 @@ public class Valentine extends Card {
     }
     @Override
     public void printGreeting() {
-        System.out.println("Dear" + recipient + ",");
+        System.out.println("Dear " + recipient + ",");
         System.out.println("Love and kisses,");
 
         for ( int j=0; j<kisses; j++ ) {
