@@ -1,5 +1,7 @@
 package lv.rvt.connecticut;
 
+
+
 public class Box {
     private double length;
     private double width;

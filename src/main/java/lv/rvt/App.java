@@ -10,7 +10,7 @@ import lv.rvt.connecticut.Box;
  
 public class App { 
     public static void main(String[] args) {
-        Box box = new Box(10);
+        Box2 box = new Box2(10);
 
         box.add(new Book("Fyodor Dostoevsky", "Crime and Punishment", 2)) ;
         box.add(new Book("Robert Martin", "Clean Code", 1));
